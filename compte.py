@@ -3,7 +3,12 @@ trait= "--------------------------"
 
 
 def compte(solde):
-    choix=input("choisir: solde, déposer, retirer, quitter : ")
+    print("solde   :")
+    print("déposer :")
+    print("retirer :")
+    print("quitter :")
+    
+    choix=input("Faites votre choix : ")
     while True:
         if choix == "solde":
             print(trait)
@@ -17,7 +22,7 @@ def compte(solde):
             depot=int(input("combien voulez vous déposer : "))
             print(trait)
             solde += depot 
-            print(f"votre solde aprés dépot : {solde}")
+            print(f"votre solde aprés dépôt : {solde}")
             print(trait)
             return compte(solde)
         elif choix == "retirer":
@@ -47,6 +52,3 @@ def compte(solde):
             return compte(solde)
 
 compte(solde)
-
-
-
